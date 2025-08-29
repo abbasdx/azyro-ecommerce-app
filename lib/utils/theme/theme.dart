@@ -1,0 +1,76 @@
+// import 'package:cwt_starter_template/utils/theme/widget_themes/bottom_sheet_theme.dart';
+// import 'package:cwt_starter_template/utils/theme/widget_themes/checkbox_theme.dart';
+// import 'package:cwt_starter_template/utils/theme/widget_themes/chip_theme.dart';
+import 'package:azyro_ecommerce_app/utils/theme/widget_themes/bottom_sheet_theme.dart';
+import 'package:azyro_ecommerce_app/utils/theme/widget_themes/checkbox_theme.dart';
+import 'package:azyro_ecommerce_app/utils/theme/widget_themes/chip_theme.dart';
+import 'package:flutter/material.dart';
+
+import 'widget_themes/appbar_theme.dart';
+import 'widget_themes/elevated_button_theme.dart';
+import 'widget_themes/outlined_button_theme.dart';
+import 'widget_themes/text_field_theme.dart';
+import 'widget_themes/text_theme.dart';
+
+// class TAppTheme {
+//   TAppTheme._();
+
+//   static ThemeData lightTheme = ThemeData(
+//     scaffoldBackgroundColor: Colors.white,
+//     brightness: Brightness.light,
+//     textTheme: TTextTheme.lightTextTheme,
+//     appBarTheme: TAppBarTheme.lightAppBarTheme,
+//     elevatedButtonTheme: TElevatedButtonTheme.lightElevatedButtonTheme,
+//     outlinedButtonTheme: TOutlinedButtonTheme.lightOutlinedButtonTheme,
+//     inputDecorationTheme: TTextFormFieldTheme.lightInputDecorationTheme,
+//   );
+
+//   static ThemeData darkTheme = ThemeData(
+//     scaffoldBackgroundColor: Colors.black,
+//     brightness: Brightness.dark,
+//     textTheme: TTextTheme.darkTextTheme,
+//     appBarTheme: TAppBarTheme.darkAppBarTheme,
+//     elevatedButtonTheme: TElevatedButtonTheme.darkElevatedButtonTheme,
+//     outlinedButtonTheme: TOutlinedButtonTheme.darkOutlinedButtonTheme,
+//     inputDecorationTheme: TTextFormFieldTheme.darkInputDecorationTheme,
+//   );
+// }
+
+
+class AppTheme {
+  AppTheme._();
+
+  /// Light Theme
+  static ThemeData lightTheme = ThemeData(
+    useMaterial3: true,
+    fontFamily: 'Poppins',
+    brightness: Brightness.light,
+    primaryColor: Colors.blue,
+    textTheme: AzyroTextTheme.lightTextTheme,
+    chipTheme: TChipTheme.lightChipTheme,
+    scaffoldBackgroundColor: Colors.white,
+    appBarTheme: TAppBarTheme.lightAppBarTheme,
+    checkboxTheme: TCheckboxTheme.lightCheckboxTheme,
+    bottomSheetTheme: TBottomSheetTheme.lightBottomSheetTheme,
+    elevatedButtonTheme: TElevatedButtonTheme.lightElevatedButtonTheme,
+    outlinedButtonTheme: TOutlinedButtonTheme.lightOutlinedButtonTheme,
+    inputDecorationTheme: TTextFormFieldTheme.lightInputDecorationTheme,
+  );
+
+  /// Dark Theme
+  static ThemeData darkTheme = ThemeData(
+    useMaterial3: true,
+    fontFamily: 'Poppins',
+    brightness: Brightness.dark,
+    primaryColor: Colors.blue,
+    textTheme: AzyroTextTheme.darkTextTheme,
+    chipTheme: TChipTheme.darkChipTheme,
+    scaffoldBackgroundColor: Colors.black,
+    appBarTheme: TAppBarTheme.darkAppBarTheme,
+    checkboxTheme: TCheckboxTheme.darkCheckboxTheme,
+    bottomSheetTheme: TBottomSheetTheme.darkBottomSheetTheme,
+    elevatedButtonTheme: TElevatedButtonTheme.darkElevatedButtonTheme,
+    outlinedButtonTheme: TOutlinedButtonTheme.darkOutlinedButtonTheme,
+    inputDecorationTheme: TTextFormFieldTheme.darkInputDecorationTheme,
+  );
+}

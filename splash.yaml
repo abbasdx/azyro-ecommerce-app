@@ -1,0 +1,29 @@
+flutter_native_splash:
+  # Background color for the splash screen
+  color: "#FFFFFF"
+  
+  # Background color for the splash screen in dark mode
+  color_dark: "#191919"
+  
+  # Image asset for the splash screen
+  image: assets\logo\azyro_splash_logo_light.png
+  
+  # Image asset for the splash screen in dark mode
+  image_dark: assets\logo\azyro_splash_logo_dark.png
+
+  # Configuration for Android 12 splash screen
+  android_12:
+    # Background color for the splash screen on Android 12
+    color: "#FFFFFF"
+    
+    # Background color for the splash screen in dark mode on Android 12
+    color_dark: "#191919"
+    
+    # Image asset for the splash screen on Android 12
+    image: assets\logo\azyro_splash_logo_light.png
+    
+    # Image asset for the splash screen in dark mode on Android 12
+    image_dark: assets\logo\azyro_splash_logo_dark.png
+
+  # Disable splash screen on the web platform
+  web: false
