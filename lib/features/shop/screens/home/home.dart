@@ -1,4 +1,12 @@
 import 'package:azyro_ecommerce_app/common/widgets/custom_shapes/containers/primary_header_container.dart';
+import 'package:azyro_ecommerce_app/common/widgets/custom_shapes/containers/search_container.dart';
+import 'package:azyro_ecommerce_app/common/widgets/texts/section_heading.dart';
+import 'package:azyro_ecommerce_app/features/shop/screens/home/widgets/home_appbar.dart';
+import 'package:azyro_ecommerce_app/features/shop/screens/home/widgets/home_categories.dart';
+import 'package:azyro_ecommerce_app/features/shop/screens/home/widgets/promo_slider.dart';
+import 'package:azyro_ecommerce_app/utils/constants/colors.dart';
+import 'package:azyro_ecommerce_app/utils/constants/image_strings.dart';
+import 'package:azyro_ecommerce_app/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -10,14 +18,58 @@ class HomeScreen extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
+            // Header
             PrimaryHeaderContainer(
-              child: Container()
+              child: Column(
+                children: [
+                  // App Bar
+                  const HomeAppBar(),
+                  const SizedBox(height: SizeConstants.spaceBtwSections),
+
+                  // Search Container
+                  AzyroSearchContainer(text: 'Saarch in Store'),
+                  const SizedBox(height: SizeConstants.spaceBtwSections),
+
+                  // Categories
+                  Padding(
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: SizeConstants.defaultSpace,
+                    ),
+                    child: Column(
+                      children: [
+                        // Section Heading
+                        const SectionHeading(
+                          title: 'Popular Categories',
+                          textColor: AppColors.white,
+                          showActionButton: false,
+                        ),
+                        const SizedBox(height: SizeConstants.spaceBtwItems),
+
+                        // Categories List
+                        const AzyroHomeCategories(),
+                      ],
+                    ),
+                  ),
+                ],
               ),
-            
+            ),
+
+            //  Body
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: SizeConstants.defaultSpace, vertical: SizeConstants.sm),
+              // Banner
+              child: AzyroPromoSlider(banners: [
+                AppImages.promoBanner1,
+                AppImages.promoBanner2,
+                AppImages.promoBanner3,
+                AppImages.promoBanner4,
+                AppImages.promoBanner5,
+                AppImages.promoBanner6
+              ],)
+            ),
           ],
         ),
       ),
     );
   }
 }
-
