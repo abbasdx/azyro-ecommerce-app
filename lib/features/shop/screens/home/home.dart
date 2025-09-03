@@ -1,5 +1,7 @@
 import 'package:azyro_ecommerce_app/common/widgets/custom_shapes/containers/primary_header_container.dart';
 import 'package:azyro_ecommerce_app/common/widgets/custom_shapes/containers/search_container.dart';
+import 'package:azyro_ecommerce_app/common/widgets/layouts/grid_layout.dart';
+import 'package:azyro_ecommerce_app/common/widgets/products/product_cards/product_card_vertical.dart';
 import 'package:azyro_ecommerce_app/common/widgets/texts/section_heading.dart';
 import 'package:azyro_ecommerce_app/features/shop/screens/home/widgets/home_appbar.dart';
 import 'package:azyro_ecommerce_app/features/shop/screens/home/widgets/home_categories.dart';
@@ -58,14 +60,27 @@ class HomeScreen extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: SizeConstants.defaultSpace, vertical: SizeConstants.sm),
               // Banner
-              child: AzyroPromoSlider(banners: [
-                AppImages.promoBanner1,
-                AppImages.promoBanner2,
-                AppImages.promoBanner3,
-                AppImages.promoBanner4,
-                AppImages.promoBanner5,
-                AppImages.promoBanner6
-              ],)
+              child: Column(
+                children: [
+
+                  // Promo Slider
+                  AzyroPromoSlider(banners: [
+                    AppImages.promoBanner1,
+                    AppImages.promoBanner2,
+                    AppImages.promoBanner3,
+                    AppImages.promoBanner4,
+                    AppImages.promoBanner5,
+                    AppImages.promoBanner6
+                  ],),
+                  const SizedBox(height: SizeConstants.spaceBtwSections,),
+
+                  // Heading
+                  SectionHeading(title: 'Popular Products', onPressed: (){}),
+
+                  // Popular Products
+                  AzyroGridLayout(itemCount: 6, itemBuilder: (_, index ) => ProductCardVertical()), // GridView.builder
+                ],
+              )
             ),
           ],
         ),
