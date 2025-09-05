@@ -29,7 +29,7 @@ class HomeScreen extends StatelessWidget {
                   const SizedBox(height: SizeConstants.spaceBtwSections),
 
                   // Search Container
-                  AzyroSearchContainer(text: 'Saarch in Store'),
+                  AzyroSearchContainer(text: 'Search in Store'),
                   const SizedBox(height: SizeConstants.spaceBtwSections),
 
                   // Categories
