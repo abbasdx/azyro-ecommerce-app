@@ -15,7 +15,7 @@ class CartItems extends StatelessWidget {
       shrinkWrap: true,
       separatorBuilder:
           (_, __) => const SizedBox(height: SizeConstants.spaceBtwSections),
-      itemCount: 12,
+      itemCount: 3,
       itemBuilder:
           (_, index) => Column(
             children: [
