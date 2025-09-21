@@ -3,7 +3,9 @@ import 'package:azyro_ecommerce_app/common/widgets/custom_shapes/containers/prim
 import 'package:azyro_ecommerce_app/common/widgets/list_tiles/settings_menu_tile.dart';
 import 'package:azyro_ecommerce_app/common/widgets/list_tiles/user_profile_tile.dart';
 import 'package:azyro_ecommerce_app/common/widgets/texts/section_heading.dart';
+import 'package:azyro_ecommerce_app/features/personalization/screens/address/address.dart';
 import 'package:azyro_ecommerce_app/features/personalization/screens/profile/profile.dart';
+import 'package:azyro_ecommerce_app/features/shop/screens/order/order.dart';
 import 'package:azyro_ecommerce_app/utils/constants/colors.dart';
 import 'package:azyro_ecommerce_app/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
@@ -49,9 +51,9 @@ class SettingsScreen extends StatelessWidget {
                 SectionHeading(title: 'Account Settings', showActionButton: false),
                 SizedBox(height: SizeConstants.spaceBtwItems),
 
-                SettingsMenuTile(icon: Iconsax.safe_home, title: 'My Addresses', subTitle: 'Set shopping delivery address'),
+                SettingsMenuTile(icon: Iconsax.safe_home, title: 'My Addresses', subTitle: 'Set shopping delivery address', onTap: ()=> Get.to(()=>const UserAddressScreen()),),
                 SettingsMenuTile(icon: Iconsax.shopping_cart, title: 'My Cart', subTitle: 'Add, remove products and move to checkout'),
-                SettingsMenuTile(icon: Iconsax.bag_tick, title: 'My Orders', subTitle: 'In-progress and Completed Orders'),
+                SettingsMenuTile(icon: Iconsax.bag_tick, title: 'My Orders', subTitle: 'In-progress and Completed Orders',  onTap: ()=> Get.to(()=>const OrderScreen())),
                 SettingsMenuTile(icon: Iconsax.bank, title: 'Bank Account', subTitle: 'Withdraw balance to registered bank account'),
                 SettingsMenuTile(icon: Iconsax.discount_shape, title: 'My Coupons', subTitle: 'List of all the discounted coupons'),
                 SettingsMenuTile(icon: Iconsax.notification, title: 'Notifications', subTitle: 'Set any kind of notification message'),
