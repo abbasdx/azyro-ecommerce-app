@@ -1,6 +1,8 @@
 import 'package:azyro_ecommerce_app/common/widgets/image_text_widgets/vertical_image_text.dart';
+import 'package:azyro_ecommerce_app/features/shop/screens/sub_category/sub_categories.dart';
 import 'package:azyro_ecommerce_app/utils/constants/image_strings.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class AzyroHomeCategories extends StatelessWidget {
   const AzyroHomeCategories({super.key});
@@ -17,7 +19,7 @@ class AzyroHomeCategories extends StatelessWidget {
           return VerticalImageText(
             image: AppImages.shoeIcon,
             title: 'Shoes',
-            onTap: () {},
+            onTap: () => Get.to(()=> const SubCategoriesScreen()),
           );
         },
       ),
